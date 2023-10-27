@@ -38,13 +38,14 @@ const guidelineBaseFonts = () => {
 };
 
 // Function to scale a size horizontally based on the device's width
-const horizontalScale = size => (width / guidelineBaseWidth()) * size;
+const horizontalScale = (size: number) => (width / guidelineBaseWidth()) * size;
 
 // Function to scale a size vertically based on the device's height
-const verticalScale = size => (height / guidelineBaseHeight()) * size;
+const verticalScale = (size: number) => (height / guidelineBaseHeight()) * size;
 
 // Function to scale a font size based on the device's width
-const scaleFontSize = size => Math.round((size * width) / guidelineBaseFonts());
+const scaleFontSize = (size: number) =>
+  Math.round((size * width) / guidelineBaseFonts());
 
 // Export the scaling functions for use in other modules
 export {horizontalScale, verticalScale, scaleFontSize};
